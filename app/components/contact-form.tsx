@@ -17,9 +17,6 @@ export default function ContactForm() {
     try {
       const response = await sendContactEmail(formData)
       setFeedback(response)
-      if (response.success) {
-        event.currentTarget.reset()
-      }
     } catch (error) {
       setFeedback({
         success: false,
