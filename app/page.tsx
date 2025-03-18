@@ -135,7 +135,7 @@ export default function HomePage() {
       <header className="navbar sticky top-0 z-10 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm shadow-sm h-[var(--header-height)]">
         <div className="container mx-auto px-4 h-full flex justify-between items-center">
           <h1 className="text-xl font-bold text-slate-800 dark:text-white">
-            <span className="text-emerald-600 dark:text-emerald-400">Dev</span>Pablo
+            <span className="text-emerald-600 dark:text-emerald-400">Tech</span>Pablo
           </h1>
 
           {/* Desktop Navigation */}
@@ -289,7 +289,7 @@ export default function HomePage() {
                   <ul className="space-y-4">
                     {[
                       { name: "Unity", level: 85 },
-                      { name: "Unreal Engine", level: 70 },
+                      { name: "Unreal Engine", level: 65 },
                       { name: "C#", level: 80 },
                       { name: "Blueprints", level: 65 },
                       { name: "Game Design", level: 75 },
@@ -319,11 +319,11 @@ export default function HomePage() {
                   </div>
                   <ul className="space-y-4">
                     {[
-                      { name: "Excel", level: 90 },
-                      { name: "Power BI", level: 75 },
-                      { name: "SQL", level: 85 },
+                      { name: "Excel", level: 80 },
+                      { name: "Power BI", level: 70 },
+                      { name: "SQL", level: 70 },
                       { name: "ETL", level: 70 },
-                      { name: "Visualização de Dados", level: 80 },
+                      { name: "Visualização de Dados", level: 75 },
                     ].map((skill) => (
                       <li key={skill.name}>
                         <div className="flex justify-between mb-1">
@@ -564,7 +564,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
             <h2 className="text-xl font-bold text-slate-800 dark:text-white">
-              <span className="text-emerald-600 dark:text-emerald-400">Dev</span>Pablo
+              <span className="text-emerald-600 dark:text-emerald-400">Tech</span>Pablo
             </h2>
             <span className="text-sm text-slate-600 dark:text-slate-300"></span>
             
