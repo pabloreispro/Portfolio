@@ -1,0 +1,545 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 160 84% 39%;
+    --radius: 0.5rem;
+    --header-height: 4rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 160 84% 39%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  /* Ensure section titles don't get covered by navbar */
+  section[id] {
+    scroll-margin-top: calc(var(--header-height) + 2rem);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.delay-400 {
+  transition-delay: 400ms;
+}
+
+.delay-500 {
+  transition-delay: 500ms;
+}
+
+/* Animated background */
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.animated-bg-shape {
+  position: absolute;
+  background: linear-gradient(45deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1));
+  border-radius: 50%;
+  animation: float 15s infinite ease-in-out;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  left: -150px;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  right: -250px;
+  animation-delay: -5s;
+}
+
+.shape-3 {
+  width: 200px;
+  height: 200px;
+  bottom: -100px;
+  left: 30%;
+  animation-delay: -10s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-30px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(30px) rotate(-5deg);
+  }
+}
+
+/* Project transitions */
+.project-item {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Project hover effect */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.project-item:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Skill bar animations */
+.skill-bar {
+  position: relative;
+}
+
+.skill-bar .skill-progress {
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+.skill-bar.animate .skill-progress {
+  width: var(--progress);
+}
+
+/* Typing animation */
+.typing-text::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+}
+
+/* Button animations */
+.btn-pulse {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-pulse::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.btn-pulse:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* 3D card effect */
+.card-3d {
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.card-3d-container {
+  perspective: 1000px;
+}
+
+/* Particle effect */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: rgba(16, 185, 129, 0.3);
+  border-radius: 50%;
+  animation: particle-float 20s infinite linear;
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-100px) translateX(100px);
+  }
+  50% {
+    transform: translateY(-200px) translateX(0);
+  }
+  75% {
+    transform: translateY(-100px) translateX(-100px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* Counter animation */
+.counter {
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* Progress circle */
+.progress-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.progress-circle svg {
+  transform: rotate(-90deg);
+}
+
+.progress-circle circle {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset 2s ease;
+}
+
+.progress-circle.animate circle {
+  stroke-dashoffset: calc(283 - (283 * var(--progress)) / 100);
+}
+
+.progress-circle .progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Image reveal animation */
+.image-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-reveal::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #10b981;
+  transform: translateX(0);
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.image-reveal.reveal::after {
+  transform: translateX(100%);
+}
+
+/* Marquee animation */
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Full-height sections */
+.section-full {
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Improved navbar */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(8px);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(to right, #10b981, #3b82f6);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: var(--header-height);
+  right: 0;
+  width: 0;
+  height: calc(100vh - var(--header-height));
+  background-color: white;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  z-index: 50;
+}
+
+.dark .mobile-menu {
+  background-color: #1e293b;
+}
+
+.mobile-menu.open {
+  width: 250px;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Percentage counter animation */
+@keyframes countUp {
+  from {
+    content: "0%";
+  }
+  to {
+    content: attr(data-percentage);
+  }
+}
+
+.percentage-text::after {
+  content: attr(data-percentage);
+  animation: countUp 2s ease-out forwards;
+}
+
+/* Progress circle animation */
+.progress-circle circle.progress {
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset 2s ease;
+  transform-origin: center;
+}
+
+.progress-circle.animate circle.progress {
+  animation: circleProgress 2s ease-out forwards;
+}
+
+@keyframes circleProgress {
+  to {
+    stroke-dashoffset: var(--dash-offset);
+  }
+}
+
+/* Form feedback */
+.form-feedback {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.form-feedback.success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.form-feedback.error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Standardized section titles */
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #10b981, #3b82f6);
+  border-radius: 2px;
+}
+
+/* Section separator */
+.section-separator {
+  position: relative;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(16, 185, 129, 0.5), transparent);
+  margin: 0;
+  width: 100%;
+}
+
