@@ -210,7 +210,7 @@ export default function HomePage() {
                   href="#contact"
                   className="px-6 py-3 border border-slate-300 dark:border-slate-600 hover:border-emerald-600 dark:hover:border-emerald-400 text-slate-800 dark:text-white rounded-lg transition-colors"
                 >
-                  Contatar-me
+                  Me contatar
                 </Link>
               </div>
             </div>
@@ -345,10 +345,10 @@ export default function HomePage() {
               {/* Circular Progress - Soft Skills with Animation */}
               <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {[
-                  { name: "Resolução de Problemas", value: 90 },
-                  { name: "Trabalho em Equipe", value: 85 },
-                  { name: "Comunicação", value: 80 },
-                  { name: "Proatividade", value: 75 },
+                  { name: "Resolução de Problemas", value: 85 },
+                  { name: "Trabalho em Equipe", value: 90 },
+                  { name: "Comunicação", value: 90 },
+                  { name: "Proatividade", value: 80 },
                 ].map((skill) => (
                   <div key={skill.name}>
                     <div className="progress-circle mx-auto animate">
