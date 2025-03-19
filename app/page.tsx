@@ -252,15 +252,15 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="md:w-1/2">
-                <p className="text-slate-600 dark:text-slate-300 mb-6">
+                <p className="text-slate-600 dark:text-slate-300 mb-6 text-justify">
                 Desenvolvedor de Jogos e estudante de Jogos Digitais, com experiência prática em Desenvolvimento de Jogos, 3D e Desenvolvimento Web. 
                 Ao longo da minha trajetória, atuei em equipes com profissionais altamente qualificados e desenvolvi projetos diversos, tanto acadêmicos quanto independentes.
                 </p>
-                <p className="text-slate-600 dark:text-slate-300 mb-6">
+                <p className="text-slate-600 dark:text-slate-300 mb-6 text-justify">
                 Tenho sólida experiência em liderança de equipes, gerenciamento de projetos e resolução de problemas técnicos, sempre buscando otimizar processos e entregar soluções de alto impacto. 
                 Durante minha formação, desenvolvi diversos jogos e sites, aplicando Unreal Engine, Unity, C# e Blueprints.
                 </p>
-                <p className="text-slate-600 dark:text-slate-300">
+                <p className="text-slate-600 dark:text-slate-300 text-justify">
                 Atualmente, estou expandindo minhas habilidades para a área de Análise de Dados, onde busco aplicar meu raciocínio lógico e experiência em TI para extrair insights valiosos. 
                 Tenho conhecimentos em Power BI, SQL e ETL e estou em busca de uma oportunidade para ingressar profissionalmente nesse setor.
                 </p>
