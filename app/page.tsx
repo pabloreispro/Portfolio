@@ -31,7 +31,7 @@ export default function HomePage() {
       title: "Master Witch",
       category: "Game Development",
       type: "game",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/MasterWitch.jpg?height=400&width=600",
       description:
         "Master Witch é um jogo multiplayer para 2 a 4 jogadores, onde bruxos competem para criar a melhor poção enquanto sabotam seus adversários.",
       icon: <GameController className="w-5 h-5" />,
@@ -42,56 +42,56 @@ export default function HomePage() {
       title: "Cowboy Samurai",
       category: "Game Development",
       type: "game",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/CowboySamurai.png?height=400&width=600",
       description:
         "Cowboy Samurai é um RPG sidescroller que combina o melhor do Velho Oeste com a arte do combate samurai.",
       icon: <GameController className="w-5 h-5" />,
       repoUrl: "https://github.com/GameDevBydo/CowboySamurai",
-      downloadUrl: ""
+      downloadUrl: "https://drive.google.com/uc?export=download&id=18CB8vTMidpeAT2xQWHlGZ2dTL88ZPYco"
     },
     {
       title: "Correndo nas Montanhas",
       category: "Game Development",
       type: "game",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/CorrendoNasMontanhas.png?height=400&width=600",
       description:
         "Um jogo runner mobile desenvolvido na Unity com uma perspectiva 2.5D, meu primeiro grande projeto criado durante a faculdade.",
       icon: <GameController className="w-5 h-5" />,
       repoUrl: "https://github.com/pabloreispro/Correndo-nas-Montanhas",
-      downloadUrl: ""
+      downloadUrl: "/Correndo nas Montanhas.apk"
     },
     {
       title: "School Simulator",
       category: "Game Development",
       type: "game",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/SchoolSimulator.png?height=400&width=600",
       description:
         "School Simulator é um jogo de gerenciamento desenvolvido na Unity, onde você administra sua própria escola, tomando decisões para mantê-la funcionando e próspera.",
       icon: <GameController className="w-5 h-5" />,
       repoUrl: "https://github.com/LuisHenrique111/School-simulator",
-      downloadUrl: ""
+      downloadUrl: "/SchoolSimulator.zip"
     },
     {
       title: "Capture the Flag - MiniGame",
       category: "Game Development",
       type: "game",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/CaptureTheFlag.png?height=400&width=600",
       description:
         "Capture the Flag é um mini game criado na Unity, desenvolvido para testar o Netcode for GameObjects, onde os jogadores competem para capturar a bandeira do time adversário.",
       icon: <GameController className="w-5 h-5" />,
-      repoUrl: "",
-      downloadUrl: ""
+      repoUrl: "https://github.com/pabloreispro/Capture-The-Flag",
+      downloadUrl: "/CaptureTheFlag.zip"
     },
     {
       title: "Air Hockey - MiniGame",
       category: "Game Development",
       type: "game",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/AirHockey-MiniGame.png?height=400&width=600",
       description:
         "Air Hockey - MiniGame é um jogo competitivo local simples, desenvolvido na Unity, que simula as mesas de air hockey de shopping, proporcionando partidas rápidas e divertidas.",
       icon: <GameController className="w-5 h-5" />,
       repoUrl: "https://github.com/pabloreispro/AirHockey_MiniGame",
-      downloadUrl: ""
+      downloadUrl: "/AirHockey-MiniGame.zip"
     },
     {
       title: "VR Experience",
@@ -467,6 +467,7 @@ export default function HomePage() {
                                 href={project.downloadUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                download
                                 className="inline-flex items-center px-3 py-1.5 bg-emerald-500 hover:bg-emerald-600 rounded-md text-sm text-white transition-colors"
                               >
                                 <Download className="w-4 h-4 mr-1.5" />
