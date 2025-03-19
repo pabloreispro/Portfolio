@@ -39,14 +39,14 @@ export default function HomePage() {
       downloadUrl: "https://master-witch.itch.io/master-witch"
     },
     {
-      title: "Predictive Player Churn Model",
+      title: "Análise de Desempenho em Call Center",
       category: "Análise de Dados",
       type: "data",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/Case Pesquisa Call Center.png?height=400&width=600",
       description:
-        "Machine learning model to predict player churn and identify at-risk players for targeted retention campaigns.",
+        "Análise detalhada dos dados de um Call Center, com visualizações interativas que destacam métricas-chave de desempenho, volume de chamadas, tempo médio de atendimento e satisfação dos clientes.",
       icon: <Database className="w-5 h-5" />,
-      dashboardUrl: "https://powerbi.com/view/churn-prediction-dashboard",
+      dashboardUrl: "https://app.powerbi.com/view?r=eyJrIjoiZTlmYjE1NzMtMjdlZC00NjZiLWIwNGMtNTVjMjVkZGMzNWJjIiwidCI6ImJkMjI3ZjE1LWQyZDItNDRhZi1iZTQ5LTZiZTdhYjY4ZjRhZCJ9",
     },
     {
       title: "Cowboy Samurai",
@@ -60,14 +60,14 @@ export default function HomePage() {
       downloadUrl: "https://drive.google.com/uc?export=download&id=18CB8vTMidpeAT2xQWHlGZ2dTL88ZPYco"
     },
     {
-      title: "Predictive Player Churn Model",
+      title: "Análise de Vendas em Varejista ",
       category: "Análise de Dados",
       type: "data",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/Case Vendas Varejista Multinacional .png?height=400&width=600",
       description:
-        "Machine learning model to predict player churn and identify at-risk players for targeted retention campaigns.",
+        "O dashboard interativo apresenta insights sobre desempenho de produtos, comportamento do consumidor, sazonalidade e tendências de mercado, etc.",
       icon: <Database className="w-5 h-5" />,
-      dashboardUrl: "https://powerbi.com/view/churn-prediction-dashboard",
+      dashboardUrl: "https://app.powerbi.com/view?r=eyJrIjoiZjEzYzcxYTMtNzliNy00MWRjLThlMWQtOTAzMzM2YTE3M2EyIiwidCI6ImJkMjI3ZjE1LWQyZDItNDRhZi1iZTQ5LTZiZTdhYjY4ZjRhZCJ9",
     },
     {
       title: "Correndo nas Montanhas",
@@ -429,7 +429,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Projects Grid - Limited to 6 projects */}
+              {/* Projects Grid - Limited to 9 projects */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {projects.slice(0, 9).map((project, index) => (
                   <div
@@ -441,7 +441,7 @@ export default function HomePage() {
                       <img
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
                       />
                       <div className="absolute top-4 right-4 bg-white dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 p-2 rounded-full">
                         {project.icon}
@@ -449,7 +449,7 @@ export default function HomePage() {
 
                       {/* Overlay with project details and links (visible on hover) */}
                       <div className="project-overlay">
-                        <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                        <h3 className="text-lg font-bold text-white mb-2">{project.title}</h3>
                         <p className="text-slate-200 mb-4 text-sm">{project.description}</p>
                         <div className="project-buttons">
                           {project.type === "game" ? (
