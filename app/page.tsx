@@ -29,7 +29,7 @@ export default function HomePage() {
   const projects = [
     {
       title: "Master Witch",
-      category: "Game Development",
+      category: "Desenvolvimento de Jogos",
       type: "game",
       image: "/MasterWitch.jpg?height=400&width=600",
       description:
@@ -39,8 +39,18 @@ export default function HomePage() {
       downloadUrl: "https://master-witch.itch.io/master-witch"
     },
     {
+      title: "Predictive Player Churn Model",
+      category: "Análise de Dados",
+      type: "data",
+      image: "/placeholder.svg?height=400&width=600",
+      description:
+        "Machine learning model to predict player churn and identify at-risk players for targeted retention campaigns.",
+      icon: <Database className="w-5 h-5" />,
+      dashboardUrl: "https://powerbi.com/view/churn-prediction-dashboard",
+    },
+    {
       title: "Cowboy Samurai",
-      category: "Game Development",
+      category: "Desenvolvimento de Jogos",
       type: "game",
       image: "/CowboySamurai.png?height=400&width=600",
       description:
@@ -50,8 +60,18 @@ export default function HomePage() {
       downloadUrl: "https://drive.google.com/uc?export=download&id=18CB8vTMidpeAT2xQWHlGZ2dTL88ZPYco"
     },
     {
+      title: "Predictive Player Churn Model",
+      category: "Análise de Dados",
+      type: "data",
+      image: "/placeholder.svg?height=400&width=600",
+      description:
+        "Machine learning model to predict player churn and identify at-risk players for targeted retention campaigns.",
+      icon: <Database className="w-5 h-5" />,
+      dashboardUrl: "https://powerbi.com/view/churn-prediction-dashboard",
+    },
+    {
       title: "Correndo nas Montanhas",
-      category: "Game Development",
+      category: "Desenvolvimento de Jogos",
       type: "game",
       image: "/CorrendoNasMontanhas.png?height=400&width=600",
       description:
@@ -62,7 +82,7 @@ export default function HomePage() {
     },
     {
       title: "School Simulator",
-      category: "Game Development",
+      category: "Desenvolvimento de Jogos",
       type: "game",
       image: "/SchoolSimulator.png?height=400&width=600",
       description:
@@ -73,7 +93,7 @@ export default function HomePage() {
     },
     {
       title: "Capture the Flag - MiniGame",
-      category: "Game Development",
+      category: "Desenvolvimento de Jogos",
       type: "game",
       image: "/CaptureTheFlag.png?height=400&width=600",
       description:
@@ -84,7 +104,7 @@ export default function HomePage() {
     },
     {
       title: "Air Hockey - MiniGame",
-      category: "Game Development",
+      category: "Desenvolvimento de Jogos",
       type: "game",
       image: "/AirHockey-MiniGame.png?height=400&width=600",
       description:
@@ -92,26 +112,6 @@ export default function HomePage() {
       icon: <GameController className="w-5 h-5" />,
       repoUrl: "https://github.com/pabloreispro/AirHockey_MiniGame",
       downloadUrl: "/AirHockey-MiniGame.zip"
-    },
-    {
-      title: "VR Experience",
-      category: "Game Development",
-      type: "game",
-      image: "/placeholder.svg?height=400&width=600",
-      description: "An immersive virtual reality experience focused on education and exploration.",
-      icon: <GameController className="w-5 h-5" />,
-      repoUrl: "https://github.com/username/vr-experience",
-      downloadUrl: "https://example.com/downloads/vr-experience.zip",
-    },
-    {
-      title: "Predictive Player Churn Model",
-      category: "Data Analysis",
-      type: "data",
-      image: "/placeholder.svg?height=400&width=600",
-      description:
-        "Machine learning model to predict player churn and identify at-risk players for targeted retention campaigns.",
-      icon: <Database className="w-5 h-5" />,
-      dashboardUrl: "https://powerbi.com/view/churn-prediction-dashboard",
     },
   ]
 
@@ -431,7 +431,7 @@ export default function HomePage() {
 
               {/* Projects Grid - Limited to 6 projects */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {projects.slice(0, 6).map((project, index) => (
+                {projects.slice(0, 9).map((project, index) => (
                   <div
                     key={index}
                     className="project-item bg-slate-50 dark:bg-slate-700 rounded-lg overflow-hidden shadow-md"
@@ -461,7 +461,7 @@ export default function HomePage() {
                                 className="inline-flex items-center px-3 py-1.5 bg-slate-200 hover:bg-slate-300 rounded-md text-sm text-slate-800 transition-colors"
                               >
                                 <Github className="w-4 h-4 mr-1.5" />
-                                Repository
+                                Visitar Repositório
                               </a>
                               <a
                                 href={project.downloadUrl}
@@ -471,7 +471,7 @@ export default function HomePage() {
                                 className="inline-flex items-center px-3 py-1.5 bg-emerald-500 hover:bg-emerald-600 rounded-md text-sm text-white transition-colors"
                               >
                                 <Download className="w-4 h-4 mr-1.5" />
-                                Download
+                                Baixar Jogo
                               </a>
                             </>
                           ) : (
@@ -482,7 +482,7 @@ export default function HomePage() {
                               className="inline-flex items-center px-3 py-1.5 bg-blue-500 hover:bg-blue-600 rounded-md text-sm text-white transition-colors"
                             >
                               <BarChart className="w-4 h-4 mr-1.5" />
-                              Dashboard
+                              Visitar Dashboard
                             </a>
                           )}
                         </div>
