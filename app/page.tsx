@@ -194,7 +194,7 @@ export default function HomePage() {
           <div className="container mx-auto flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 dark:text-white mb-4">
-              GameDev <span className="text-emerald-600 dark:text-emerald-400">&</span> Analista de Dados em Formação
+              GameDev <span className="text-emerald-600 dark:text-emerald-400">&</span> Analista de Dados
               </h1>
               <p className="text-lg text-slate-600 dark:text-slate-300 mb-8">
               Criando jogos e explorando o mundo dos dados.
@@ -245,7 +245,7 @@ export default function HomePage() {
                       <User className="w-10 h-10 text-emerald-600 dark:text-emerald-400 mb-4" />
                       <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-2">Quem sou eu</h3>
                       <p className="text-slate-600 dark:text-slate-300">
-                        Sou desenvolvedor de jogos e estou me aprofundando em análise de dados para criar experiências interativas mais inteligentes e envolventes.
+                        Sou desenvolvedor de jogos e analista de dados.
                       </p>
                     </div>
                   </div>
@@ -253,7 +253,7 @@ export default function HomePage() {
               </div>
               <div className="md:w-1/2">
                 <p className="text-slate-600 dark:text-slate-300 mb-6 text-justify">
-                Desenvolvedor de Jogos e estudante de Jogos Digitais, com experiência prática em Desenvolvimento de Jogos, 3D e Desenvolvimento Web. 
+                Desenvolvedor de Jogos com experiência prática em Desenvolvimento de Jogos 3D e Desenvolvimento Web. 
                 Ao longo da minha trajetória, atuei em equipes com profissionais altamente qualificados e desenvolvi projetos diversos, tanto acadêmicos quanto independentes.
                 </p>
                 <p className="text-slate-600 dark:text-slate-300 mb-6 text-justify">
@@ -261,8 +261,7 @@ export default function HomePage() {
                 Durante minha formação, desenvolvi diversos jogos e sites, aplicando Unreal Engine, Unity, C# e Blueprints.
                 </p>
                 <p className="text-slate-600 dark:text-slate-300 text-justify">
-                Atualmente, estou expandindo minhas habilidades para a área de Análise de Dados, onde busco aplicar meu raciocínio lógico e experiência em TI para extrair insights valiosos. 
-                Tenho conhecimentos em Power BI, SQL e ETL e estou em busca de uma oportunidade para ingressar profissionalmente nesse setor.
+                Atuo na área de Análise de Dados, aplicando meu raciocínio lógico e experiência em TI para transformar informações em insights estratégicos. Tenho experiência com Power BI, SQL e processos de ETL, desenvolvendo dashboards, estruturando e organizando dados para apoiar a tomada de decisões. Busco constantemente aprimorar minhas habilidades e contribuir para soluções cada vez mais eficientes.
                 </p>
               </div>
             </div>
